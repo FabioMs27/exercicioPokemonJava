@@ -92,7 +92,7 @@ public class Jogo {
 	public String getGinasio() {
 		String msg = "";
 		for (int i = 0; i < ginasios.length; i++) {
-			msg += (i+1) + " " + ginaisos.get(i).getNome() + "\n";
+			msg += (i+1) + " " + ginasios.get(i).getNome() + "\n";
 		}
 		return msg;
 	}
