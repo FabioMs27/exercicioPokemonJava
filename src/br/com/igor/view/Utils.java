@@ -1,4 +1,5 @@
 package br.com.igor.view;
+import java.util.Random;
 import javax.swing.JOptionPane;
 
 import br.com.igor.main.*;
@@ -66,11 +67,30 @@ public abstract class Utils {
 	
 	static public void acessarJogador(Jogo jogo) {
 		try {
-			jogo.getJogador(View.getInt(jogo.getJogadores() + "escolha o jogador: "));
+			Jogador player = jogo.getJogador(View.getInt(jogo.getJogadores() + "escolha o jogador: "));
 			//submenu
+			Executora.subMenu(player, jogo);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
 	}
 	
+	
+	/**
+	 * O método random randomiza um numero recenbendo dois numero como parametro
+	 * @param min
+	 * @param max
+	 * @return o numero escolhido no metodo randomico
+	 */
+	public static double random(double min, double max) {
+		Random random = new Random();
+		
+		double aux = max - min;
+		double scaled = random.nextDouble() * aux;
+		double shifted = scaled + min;
+		double finalValue = Math.round(shifted * 100.0) / 100.00;
+		
+		return finalValue;		
+		
+	}
 }
