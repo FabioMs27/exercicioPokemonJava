@@ -3,12 +3,8 @@ import javax.swing.JOptionPane;
 
 import br.com.igor.main.*;
 
-
-import javax.swing.JOptionPane;
-
-import br.com.igor.main.*;
-
-<<<<<<< Updated upstream
+public abstract class Utils {
+	
 	/**
 	 * adiciona um jogador no sistema atravez de inputs do Usuário.
 	 * @param jogo o jogo onde está a estrutura do projeto.
@@ -49,6 +45,8 @@ import br.com.igor.main.*;
 						0);
 				break;
 			case 3:
+				pokemon = new Vento(
+						View.getString("Digite o nome do Pokemon: "),
 						3,
 						0);
 				break;
@@ -74,19 +72,7 @@ import br.com.igor.main.*;
 		}
 	}
 	
-=======
-public abstract class Utils {
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	public static Ginasio criarGinasio() {
 		Ginasio ginasio = null;
@@ -100,7 +86,4 @@ public abstract class Utils {
 		return ginasio;
 	}
 	
-	
-	
->>>>>>> Stashed changes
 }
