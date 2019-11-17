@@ -92,13 +92,20 @@ public class Jogador {
 	 * @param pokemon Pokemon que deseja capturar
 	 */
 	public void capturar(Pokemons pokemon) {
+		boolean aux;
 		
-		if(contPokemon < 3) {
-			setPokemons(pokemon);
+		aux = pokemon.chanceDeCapturar();
+		
+		if(aux == true) {
+			if(contPokemon < 3) {
+				setPokemons(pokemon);
+			}else {
+				throw new IllegalArgumentException("Limite de pokemons excedido para capturar!");
+			}
 		}else {
-			throw new IllegalArgumentException("Limite de pokemons excedido para capturar!");
+			//View.mostrarMsg
 		}
-		
+
 	}
 	/**
 	 * Esse método permite adicionar uma contagem de pokemon

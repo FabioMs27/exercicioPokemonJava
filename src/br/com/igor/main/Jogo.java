@@ -98,7 +98,6 @@ public class Jogo {
 	}
 	
 	/**
-	 * metodo em que o usuario manda um valor e recebe o Ginasio que corresponde ao mesmo.
 	 * @param index a posição do ginasio.
 	 * @return um ginasio escolhido pelo usuário.
 	 */

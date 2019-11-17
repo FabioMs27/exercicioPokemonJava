@@ -29,7 +29,7 @@ abstract public class Pokemons {
 	 *  Esse método abstrato tem a funcao de dar uma chance de capturar um pokemon
 	 * @return um valor se capturou um pokemon
 	 */
-	public abstract int chanceDeCapturar();
+	public abstract boolean chanceDeCapturar();
 	
 	/**
 	 * Esse método retorna o nome do pokemon
