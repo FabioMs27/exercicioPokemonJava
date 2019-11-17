@@ -4,10 +4,11 @@ package br.com.igor.main;
  * @author fabioms
  *
  */
-public class Ginasio {
+public class Ginasio implements Batalhavel{
 	//Atributos
 	private String nome;
 	private Jogador lider;
+	private Pokemons campeao;
 	//Construtor
 	/**
 	 * Construtor da classe. Ela começa sem lider.
@@ -15,6 +16,7 @@ public class Ginasio {
 	 */
 	Ginasio(String nome){
 		this.lider = null;
+		this.campeao = null;
 	}
 	/**
 	 * retorna o nome do ginasio.
@@ -46,6 +48,21 @@ public class Ginasio {
 	 */
 	public void setLider(Jogador lider) {
 		this.lider = lider;
+	}
+	
+	@Override
+	public void batalhar(Jogador player1) {
+		// TODO Auto-generated method stub
+		//get pokemon
+		Pokemons poke = player1.getPokemon(0);
+		
+		if(poke.getNivel() >= this.campeao.getNivel() + 3 || this.lider == null || poke.getTipo() == campeao.getFraqueza()) {
+			this.campeao = poke;
+			this.lider = player1;
+			//Você é o novo líder!
+		}else{
+			//Perdeu a batalha!
+		}
 	}
 	
 }
