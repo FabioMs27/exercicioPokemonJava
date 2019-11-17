@@ -25,6 +25,29 @@ public class Jogador {
 		setPokemons(pokemon);
 		setContPokemon(1);
 	}
+	
+	/**
+	 * Escolhe um pokemon que o usuario queria usar na batalha
+	 * @param index a posição do pokemon escolhido
+	 * @return retorna o pokemon.
+	 */
+	public Pokemons getPokemon(int index) {
+		if(index >= 3)
+			throw new IllegalAccessError("Pokemon invalido!");
+		return this.pokemons[index];
+	}
+	/**
+	 * um menu de opção referentes aos pokemons do usuário.
+	 * @return as opções em forma de string.
+	 */
+	public String getPokemons() {
+		String msg = "";
+		for (int i = 0; i < pokemons.length; i++) {
+			msg += i + " " + pokemons[i] + "\n";
+		}
+		return msg;
+	}
+	
 	/**
 	 * Esse método retorna o nome do jogador
 	 * @return nome do jogador

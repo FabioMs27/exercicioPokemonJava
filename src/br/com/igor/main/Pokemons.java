@@ -8,6 +8,7 @@ abstract public class Pokemons {
 	
 	protected String nome;
 	protected int tipo;
+	protected int fraqueza;
 	protected int nivel;
 	protected int exp;
 	
@@ -94,6 +95,13 @@ abstract public class Pokemons {
 			this.nivel++;
 		}
 	}
+	/**
+	 * retorna a fraqueza do POKEMON
+	 * @return retorna o valor que representa a fraqueza do POKEMON.
+	 */
+	public int getFraqueza() {
+		return this.fraqueza;
+	}
 	
 	/**
 	 * Esse método adiciona um tipo de pokemon que foi digitado na caixa de texto
@@ -101,10 +109,24 @@ abstract public class Pokemons {
 	 */
 	public void setTipo(int tipo) {
 		
-		if(tipo > 3) {
+		if(tipo > 3 || tipo <= 0) {
 			throw new IllegalArgumentException("Tipo não existente no sistema!");
 		}else {
 			this.tipo = tipo;
+			switch (tipo) {
+			case 1: // tipo agua
+				this.fraqueza = 3;
+				break;
+			case 2: // fogo
+				this.fraqueza = 1;
+				break;
+			case 3: // vento
+				this.fraqueza = 2;
+				break;
+
+			default:
+				throw new IllegalArgumentException("Unexpected value: " + tipo);
+			}
 		}
 
 	}
