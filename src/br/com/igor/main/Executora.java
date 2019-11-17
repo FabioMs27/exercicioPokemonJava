@@ -2,6 +2,9 @@ package br.com.igor.main;
 import br.com.igor.view.*;
 public class Executora {
 
+	//Alunos: Fábio Maciel de Sousa, UC18101183
+	// Igor de Castro Batista dos Santos, UC17201127
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
@@ -55,7 +58,7 @@ public class Executora {
 				player.capturar(jogo.getPokemon((int)(Utils.random(0,jogo.getPokemonCount()))));
 				break;
 			case 2:
-				jogo.getGinasio(View.getInt(jogo.getGinasio() + " Escolha: "));
+				jogo.getGinasio(View.getInt(jogo.getGinasio() + " Escolha: ") - 1);
 				break;
 			case 3:
 				voltar = true;

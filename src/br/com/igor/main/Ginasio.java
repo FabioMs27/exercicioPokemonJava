@@ -16,6 +16,7 @@ public class Ginasio implements Batalhavel{
 	 * @param nome nome do ginasio
 	 */
 	public Ginasio(String nome){
+		setNome(nome);
 		this.lider = null;
 		this.campeao = null;
 	}

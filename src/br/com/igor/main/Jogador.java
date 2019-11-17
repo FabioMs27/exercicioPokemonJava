@@ -11,7 +11,7 @@ public class Jogador {
 	private String nome;
 	private String senha;
 	protected int contPokemon;
-	Pokemons pokemons[] = {};
+	Pokemons pokemons[] = new Pokemons[3];
 	
 	/**
 	 * Esse Construtor recebe uma string do nome do jogador, a senha do jogador e o pokemon primario do jogador
@@ -20,10 +20,10 @@ public class Jogador {
 	 * @param pokemon
 	 */
 	public Jogador(String nome, String senha, Pokemons pokemon){
+		contPokemon = 0;
 		setNome(nome);
 		setSenha(senha);
 		setPokemons(pokemon);
-		setContPokemon(1);
 	}
 	
 	/**
@@ -99,6 +99,8 @@ public class Jogador {
 		if(aux == true) {
 			if(contPokemon < 3) {
 				setPokemons(pokemon);
+				View.getMsg(pokemon + "foi capturado!");
+
 			}else {
 				throw new IllegalArgumentException("Limite de pokemons excedido para capturar!");
 			}
@@ -121,8 +123,7 @@ public class Jogador {
 	public void setPokemons(Pokemons pokemons) {
 		
 		if(contPokemon < 3) {
-			this.pokemons[contPokemon] = pokemons;
-			setContPokemon(contPokemon);
+			this.pokemons[contPokemon++] = pokemons;
 		}else {
 			throw new IllegalArgumentException("Limite de Pokemons excedido!");
 		}

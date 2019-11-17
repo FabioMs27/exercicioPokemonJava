@@ -72,7 +72,7 @@ public abstract class Utils {
 	 */
 	static public void acessarJogador(Jogo jogo) {
 		try {
-			Jogador player = jogo.getJogador(View.getInt(jogo.getJogadores() + "escolha o jogador: "));
+			Jogador player = jogo.getJogador(View.getInt(jogo.getJogadores() + "escolha o jogador: ") -1);
 			//submenu
 			Executora.subMenu(player, jogo);
 		} catch (Exception e) {
@@ -108,7 +108,7 @@ public abstract class Utils {
 		try {
 			String nome = View.getString("Digite o nome do Ginasio:");
 			ginasio = new Ginasio(nome);
-		} catch (Exception e) {
+		} catch (IllegalArgumentException e) {
 			// TODO: handle exception
 			View.getMsgError(e.getMessage());
 		}
