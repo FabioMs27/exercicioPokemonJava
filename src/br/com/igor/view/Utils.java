@@ -3,7 +3,11 @@ import java.util.Random;
 import javax.swing.JOptionPane;
 
 import br.com.igor.main.*;
-
+/**
+ * A classe Utils serve para gerenciar os inputs do Usuário
+ * @author igor
+ *
+ */
 public abstract class Utils {
 	
 	/**
@@ -27,8 +31,8 @@ public abstract class Utils {
 	}
 	
 	/**
-	 * adicionar um pokemon no sistema.
-	 * @return um pokemon com os inputs do usuário
+	 * O método Cria um pokemon a partir de inputs do Usuário
+	 * @return o pokemon criado pelo personagem
 	 */
 	static public Pokemons criarPokemon() {
 		Pokemons pokemon = null;
@@ -67,13 +71,14 @@ public abstract class Utils {
 		return pokemon;
 	}
 	/**
-	 * leva um jogador para o submenu onde ele podera jogar o jogo.
-	 * @param jogo a estrutura onde tem todas as informações do jogo.
+	 * O método acessa as informações do jogador escolhido pelo Usuario
+	 * @param jogo onde está a estrutura do projeto
 	 */
 	static public void acessarJogador(Jogo jogo) {
 		try {
 			Jogador player = jogo.getJogador(View.getInt(jogo.getJogadores() + "escolha o jogador: ") -1);
 			//submenu
+			
 			Executora.subMenu(player, jogo);
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -100,8 +105,8 @@ public abstract class Utils {
 	}
 
 	/**
-	 * adicionar um ginasio no sistema
-	 * @return retorna um ginasio com as informações definidas atravez dos inputs do usuário.
+	 * O método cria ginásio no sistema por inputs do Usuário
+	 * @return o ginásio criado pelo usuário
 	 */
 	public static Ginasio criarGinasio() {
 		Ginasio ginasio = null;
