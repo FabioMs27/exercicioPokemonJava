@@ -26,7 +26,10 @@ public abstract class Utils {
 		return jogador;
 	}
 	
-	
+	/**
+	 * adicionar um pokemon no sistema.
+	 * @return um pokemon com os inputs do usuário
+	 */
 	static public Pokemons criarPokemon() {
 		Pokemons pokemon = null;
 		
@@ -63,7 +66,10 @@ public abstract class Utils {
 		
 		return pokemon;
 	}
-	
+	/**
+	 * leva um jogador para o submenu onde ele podera jogar o jogo.
+	 * @param jogo a estrutura onde tem todas as informações do jogo.
+	 */
 	static public void acessarJogador(Jogo jogo) {
 		try {
 			Jogador player = jogo.getJogador(View.getInt(jogo.getJogadores() + "escolha o jogador: "));
@@ -93,7 +99,10 @@ public abstract class Utils {
 		
 	}
 
-	
+	/**
+	 * adicionar um ginasio no sistema
+	 * @return retorna um ginasio com as informações definidas atravez dos inputs do usuário.
+	 */
 	public static Ginasio criarGinasio() {
 		Ginasio ginasio = null;
 		try {

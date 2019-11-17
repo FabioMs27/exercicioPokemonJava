@@ -13,6 +13,16 @@ public class Jogo {
 	private ArrayList<Pokemons>pokemons = new ArrayList<Pokemons>();
 	private ArrayList<Ginasio>ginasios = new ArrayList<Ginasio>();
 	
+	Jogo(){
+		pokemons.add(new Agua("Squirtle",1,2));
+		pokemons.add(new Fogo("Charizard",2,3));
+		pokemons.add(new Vento("Jigglypuff",3,0));
+		jogadores.add(new Jogador("Fabio", "123", pokemons.get(0)));
+		jogadores.add(new Jogador("Igor", "123", pokemons.get(0)));
+		jogadores.add(new Jogador("Vitão", "123", pokemons.get(0)));
+		ginasios.add(new Ginasio("UCB"));
+	}
+	
 	//Métodos
 	/**
 	 * adicionar jogadores para o ArrayList.
