@@ -142,8 +142,8 @@ public class Jogador {
 	 */
 	@Override
 	public String toString() {
-		return "Jogador [nome=" + nome + ", senha=" + senha + ", contPokemon=" + contPokemon + ", pokemons="
-				+ Arrays.toString(pokemons) + "]";
+		return "Jogador:\n Nome:" + nome + "\nSenha:" + senha + "\nQuantidade de Pokemon:" + contPokemon + "\nPokemons:"
+				+ Arrays.toString(pokemons) + "\n";
 	}
 	
 	

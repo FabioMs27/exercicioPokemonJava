@@ -25,36 +25,28 @@ public class Executora {
 			}
 			switch (opcao) {
 			case 1:
-				//jogador = Utils.criarJogador();
-				//jogo.addJogadores(jogador);
+				jogador = Utils.criarJogador(jogo);
+				jogo.addJogadores(jogador);
 				break;
 			case 2:
 				ginasio = Utils.criarGinasio();
 				jogo.addGinasio(ginasio);
 				break;
 			case 3:
-				//pokemon = Utils.criarPokemon();
-				//jogo.addPokemons(pokemon);
+				pokemon = Utils.criarPokemon();
+				jogo.addPokemons(pokemon);
 				break;
 			case 4:
-				
-				
+				Utils.acessarJogador(jogo);
 				break;
 			case 5:
 				break;
 			default:
 				throw new IllegalArgumentException("Unexpected value: " + opcao);
 			}
-			
-			
-			
-			
-			
-			
+	
 		}while(opcao != 5);
-		
-		
-		
+
 	}
 
 }
