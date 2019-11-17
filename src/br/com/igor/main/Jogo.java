@@ -45,7 +45,7 @@ public class Jogo {
 	 */
 	public String getJogadores() {
 		String msg = "";
-		for (int i = 0; i < jogadores.length; i++) {
+		for (int i = 0; i < jogadores.size(); i++) {
 			msg += (i+1) + " " + jogadores.get(i).getNome() + "\n";
 		}
 		return msg;
@@ -68,7 +68,7 @@ public class Jogo {
 	 */
 	public String getPokemons() {
 		String msg = "";
-		for (int i = 0; i < pokemons.length; i++) {
+		for (int i = 0; i < pokemons.size(); i++) {
 			msg += (i+1) + " " + pokemons.get(i) + "\n";
 		}
 		return msg;
@@ -91,8 +91,8 @@ public class Jogo {
 	 */
 	public String getGinasio() {
 		String msg = "";
-		for (int i = 0; i < ginasios.length; i++) {
-			msg += (i+1) + " " + ginaisos.get(i).getNome() + "\n";
+		for (int i = 0; i < ginasios.size(); i++) {
+			msg += (i+1) + " " + ginasios.get(i).getNome() + "\n";
 		}
 		return msg;
 	}
