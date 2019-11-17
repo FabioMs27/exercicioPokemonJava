@@ -1,4 +1,5 @@
 package br.com.igor.main;
+import br.com.igor.view.View;;
 /**
  * Classe Ginasio onde ocorrem as batalhas e tem um lider.
  * @author fabioms
@@ -14,7 +15,7 @@ public class Ginasio implements Batalhavel{
 	 * Construtor da classe. Ela começa sem lider.
 	 * @param nome nome do ginasio
 	 */
-	Ginasio(String nome){
+	public Ginasio(String nome){
 		this.lider = null;
 		this.campeao = null;
 	}
@@ -54,14 +55,17 @@ public class Ginasio implements Batalhavel{
 	public void batalhar(Jogador player1) {
 		// TODO Auto-generated method stub
 		//get pokemon
-		Pokemons poke = player1.getPokemon(0);
+		Pokemons poke = player1.getPokemon(View.getInt(player1.getPokemons() + "Escolha: "));
 		
 		if(poke.getNivel() >= this.campeao.getNivel() + 3 || this.lider == null || poke.getTipo() == campeao.getFraqueza()) {
 			this.campeao = poke;
 			this.lider = player1;
 			//Você é o novo líder!
+			View.getMsg("Você é o líder!");
+		
 		}else{
 			//Perdeu a batalha!
+			View.getMsgError("Perdeu a batalha!");
 		}
 	}
 	

@@ -15,8 +15,8 @@ public class Agua extends Pokemons{
 	 * @param nivel
 	 * @param exp
 	 */
-	Agua(String nome, int tipo, int nivel, int exp) {
-		super(nome, tipo, nivel, exp);
+	public Agua(String nome, int tipo, int nivel) {
+		super(nome, tipo, nivel);
 		// TODO Auto-generated constructor stub
 	}
 

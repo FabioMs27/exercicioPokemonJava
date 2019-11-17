@@ -16,8 +16,8 @@ public class Fogo extends Pokemons{
 	 * @param nivel
 	 * @param exp
 	 */
-	Fogo(String nome, int tipo, int nivel, int exp) {
-		super(nome, tipo, nivel, exp);
+	public Fogo(String nome, int tipo, int nivel) {
+		super(nome, tipo, nivel);
 		// TODO Auto-generated constructor stub
 	}
 

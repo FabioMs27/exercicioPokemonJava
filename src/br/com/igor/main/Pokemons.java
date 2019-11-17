@@ -19,11 +19,11 @@ abstract public class Pokemons {
 	 * @param nivel
 	 * @param exp
 	 */
-	Pokemons(String nome, int tipo, int nivel, int exp) {
+	public Pokemons(String nome, int tipo, int nivel) {
 		setNome(nome);
 		setTipo(tipo);
 		setNivel(nivel);
-		setExp(exp);
+		setExp(0);
 	}
 	/**
 	 *  Esse método abstrato tem a funcao de dar uma chance de capturar um pokemon

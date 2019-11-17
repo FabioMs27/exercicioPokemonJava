@@ -15,8 +15,8 @@ public class Vento extends Pokemons{
 	 * @param nivel
 	 * @param exp
 	 */
-	Vento(String nome, int tipo, int nivel, int exp) {
-		super(nome, tipo, nivel, exp);
+	public Vento(String nome, int tipo, int nivel) {
+		super(nome, tipo, nivel);
 		// TODO Auto-generated constructor stub
 	}
 

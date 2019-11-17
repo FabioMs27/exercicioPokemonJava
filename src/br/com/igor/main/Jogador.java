@@ -19,7 +19,7 @@ public class Jogador {
 	 * @param senha
 	 * @param pokemon
 	 */
-	Jogador(String nome, String senha, Pokemons pokemon){
+	public Jogador(String nome, String senha, Pokemons pokemon){
 		setNome(nome);
 		setSenha(senha);
 		setPokemons(pokemon);
