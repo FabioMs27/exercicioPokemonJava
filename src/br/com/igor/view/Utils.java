@@ -4,9 +4,8 @@ import javax.swing.JOptionPane;
 
 import br.com.igor.main.*;
 
-
 public abstract class Utils {
-
+	
 	/**
 	 * adiciona um jogador no sistema atravez de inputs do Usuário.
 	 * @param jogo o jogo onde está a estrutura do projeto.
@@ -93,4 +92,18 @@ public abstract class Utils {
 		return finalValue;		
 		
 	}
+
+	
+	public static Ginasio criarGinasio() {
+		Ginasio ginasio = null;
+		try {
+			String nome = View.getString("Digite o nome do Ginasio:");
+			ginasio = new Ginasio(nome);
+		} catch (Exception e) {
+			// TODO: handle exception
+			View.getMsgError(e.getMessage());
+		}
+		return ginasio;
+	}
+	
 }

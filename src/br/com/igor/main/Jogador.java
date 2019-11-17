@@ -1,6 +1,6 @@
 package br.com.igor.main;
 import java.util.Arrays;
-
+import br.com.igor.view.View;
 /**
  * A Classe Jogador administra jogadores do sistema
  * @author igor
@@ -33,7 +33,7 @@ public class Jogador {
 	 */
 	public Pokemons getPokemon(int index) {
 		if(index >= 3)
-			throw new IllegalAccessError("Pokemon invalido!");
+			throw new IllegalArgumentException("Pokemon invalido!");
 		return this.pokemons[index];
 	}
 	/**
@@ -103,7 +103,7 @@ public class Jogador {
 				throw new IllegalArgumentException("Limite de pokemons excedido para capturar!");
 			}
 		}else {
-			//View.mostrarMsg
+			View.getMsg("Pokemon selvagem escapou!");
 		}
 
 	}
